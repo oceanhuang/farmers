@@ -1,0 +1,55 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+{% load staticfiles %}
+
+{% block bootstrap3_title %}Name Placeholder{% endblock %}
+
+{% block bootstrap3_extra_head %}
+    <style type="text/css">
+        body {
+          padding-top: 70px;
+        }
+        .row-padding {
+            padding: 40px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block bootstrap3_content %}
+    
+    {% include "header.html" %}
+
+    <div class="container">
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "dairy.png" %}" class="img-responsive">
+          </div>
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "bakedgoods.png" %}" class="img-responsive">
+          </div>
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "fruits.png" %}" class="img-responsive">
+          </div>
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "meatandfish.png" %}" class="img-responsive">
+          </div>
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "basket.png" %}" class="img-responsive">
+          </div>
+          <div class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+        </div>
+        
+
+        <h1>{% block title %}(no title){% endblock %}</h1>
+
+        <p>
+        Hey hey hey
+        </p>
+
+        {% block content %}(no content){% endblock %}
+    </div>
+
+{% endblock %}
