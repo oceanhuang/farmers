@@ -6,7 +6,7 @@ from django.template import RequestContext, loader
 
 class HomePageView(TemplateView):
     template_name = 'base.html'
-
+    
     cat = category
     everything = Product.objects.all()
     prodSet = []
@@ -17,6 +17,10 @@ class HomePageView(TemplateView):
     return HttpResponse(prodSet)
 
 
+class CheckoutPageView(TemplateView):
+	template_name = 'checkout.html'
 
+class InitView(TemplateView):
+	template_name = 'init.html'
 
 
