@@ -7,6 +7,7 @@
 
 {% block bootstrap3_extra_head %}
     <link rel="stylesheet" type="text/css" href="{% static "custom.css" %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 {% endblock %}
 
 
@@ -68,7 +69,7 @@
 
     <div class="container">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-        <div class="row ">
+        <div class="row">
 
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
@@ -96,9 +97,61 @@
               <div class="text-center voffset5">veg</div>
           </div>
         </div>
-        
+
         <div class="row voffset5">
-            <div class="col-md-8"></div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="{% static "images/order_garlic.jpg" %}" class="img-responsive img-rounded">
+                  <div class="text-center"><h4>Garlic</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_bluepotatoes.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Blue Potatoes</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_parsnips.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Parsnips</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="{% static "images/order_bokchoy.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Bokchoy</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_redonion.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Red Onion</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_shiitakemush.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Shiitake Mushroom</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="{% static "images/order_sweetpotatoes.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Sweet Potatoes</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_brusselsprouts.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Brussel Sprouts</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+                <div class="col-md-4">
+                  <img src="{% static "images/order_butternutsquash.jpg" %}" class="img-responsive img-rounded">
+                  <div class="row text-center"><h4>Butternut Squash</h4></div>
+                  {% include "add-minus.html" %}
+                </div>
+              </div>
+            </div>
             <div class="col-md-4">
                 <div class="sidebar-nav-fixed affix">
                     <h3 class="text-center">Shopping Cart</h3>
@@ -151,14 +204,6 @@
             </div>
 
         </div>
-
-        <h1>{% block title %}(no title){% endblock %}</h1>
-
-        <p>
-        Hey hey hey
-        </p>
-
-        {% block content %}(no content){% endblock %}
     </div>
 
 {% endblock %}
