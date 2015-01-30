@@ -72,81 +72,77 @@
 
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
-              <div class="text-center top-buffer active_select">Dairy</div>
+              <div class="text-center voffset5 active_select">Dairy</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/bakedgoods.png" %}" class="img-responsive"></a>
-              <div class="text-center top-buffer">bakedgoods</div>
+              <div class="text-center voffset5">bakedgoods</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/fruits.png" %}" class="img-responsive"></a>
-              <div class="text-center top-buffer">fruits</div>
+              <div class="text-center voffset5">fruits</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/meatsandfish.png" %}" class="img-responsive"></a>
-              <div class="text-center top-buffer">meats</div>
+              <div class="text-center voffset5">meats</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/basket.png" %}" class="img-responsive"></a>
-              <div class="text-center top-buffer">basket</div>
+              <div class="text-center voffset5">basket</div>
           </div>
 
           <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
               <img src="{% static "veg.png" %}" class="img-responsive">
-              <div class="text-center top-buffer">veg</div>
+              <div class="text-center voffset5">veg</div>
           </div>
-        </div>
-
-
-        <div> 
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
-          </div>
-
         </div>
         
-        <div class="row top-buffer">
+        <div class="row voffset5">
             <div class="col-md-8"></div>
             <div class="col-md-4">
                 <div class="sidebar-nav-fixed affix">
                     <h3 class="text-center">Shopping Cart</h3>
                     <div id="cart_info">
                         <div style="margin-left:30px;">
-                          <br>
-                          <h5>Apple</h5>
-                          <p class="pull-right">$10</p>
-                          <p>$2.50/bushels x 4 </p>
-                          <h5>Kale</h5>
-                          <p class="pull-right">$10</p>
-                          <p>$2.50/bushels x 4 </p>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <p class="pull-right">$10</p>
-                          <h5>Tax</h5>
-                          <p class="pull-right">$10</p>
-                          <h5>Shipping</h5>
-                          <br>
-                          <h5>Delivery Time and Date</h5>
-                          <br>
-                          <div class="center-block">
+                          <div class="voffset25">
+                            <h5 class="center-block">Apple</h5>
+                            <p class="pull-right">$10</p>
+                            <p>$2.50/bushels x 4 </p>
+                            <h5>Kale</h5>
+                            <p class="pull-right">$10</p>
+                            <p>$2.50/bushels x 4 </p>
+                          </div>
+
+                          <div class="voffset100"> 
+                            <p class="pull-right">$10</p>
+                            <h5>Tax</h5>
+                            <p class="pull-right">$10</p>
+                            <h5>Shipping</h5>
+                            <h5 class="voffset5">Delivery Time and Date</h5>
+                            <div class="row">
+                              <div class='col-sm-6'>
+                                  <div class="form-group">
+                                      <div class='input-group date' id='datetimepicker2'>
+                                          <input type='text' class="form-control" disabled></input>
+                                      </div>
+                                  </div>
+                                </div>
+                            
+                              <div class='col-sm-6'>
+                                  <div class='input-group date' id='datetimepicker3'>
+                                      <input type='text' class="form-control" />
+                                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <script type="text/javascript">
+                                $('#datetimepicker3').datetimepicker({
+                                  format: 'LT'
+                                });
+                              </script>
+                            </div>
+                          </div>
+                          <div class="center-block voffset10">
                             <button type="button" class="btn btn-lg btn-success center-block">Place Order</button>
                           </div>
                         </div>

@@ -6,7 +6,22 @@ body {
     padding-right: 60px;
     padding-top: 30px;
 }
-.top-buffer { margin-top:5px; }
+.voffset5 {
+	margin-top: 5px;
+}
+.voffset10 {
+	margin-top: 10px;
+}
+.voffset25 {
+	margin-top: 25px;
+}
+.voffset50 {
+	margin-top: 50px;
+}
+.voffset100 {
+	margin-top: 100px;
+}
+
 .active_select { border-bottom: 2px solid #5FB732; }
 #cart_info { border-left: 2px solid #5FB732; }
 .navbar-custom { background-color: #5FB732; }
