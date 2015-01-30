@@ -4,14 +4,7 @@
 {% block bootstrap3_title %}Name Placeholder{% endblock %}
 
 {% block bootstrap3_extra_head %}
-    <style type="text/css">
-        body {
-          padding-top: 70px;
-        }
-        .row-padding {
-            padding: 40px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static "custom.css" %}">
 {% endblock %}
 
 
@@ -22,23 +15,30 @@
     <div class="container">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row">
+
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "dairy.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer active_select">Dairy</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "bakedgoods.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/bakedgoods.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer">bakedgoods</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "fruits.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/fruits.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer">fruits</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "meatandfish.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/meatsandfish.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer">meats</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "basket.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/basket.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer">basket</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
+              <a href=""><img src="{% static "images/veg.png" %}" class="img-responsive"></a>
+              <div class="text-center top-buffer">veg</div>
           </div>
         </div>
         
