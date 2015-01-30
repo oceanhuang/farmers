@@ -163,58 +163,77 @@
         <div id="content-row" hidden class="row">
             <div class="col-md-8 voffset50">
               <div class="row">
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="garlic" data-amount=0>
                   <img src="{% static "images/order_garlic.jpg" %}" class="img-responsive img-rounded">
                   <!--- H4, H5, H6 all have huge margins -->
                   <div class="text-center"><h4>Garlic</h4></div>
                   {% include "add-minus.html" %}
 
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="bpotatoes" data-amount=0>
                   <img src="{% static "images/order_bluepotatoes.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Blue Potatoes</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4"  data-name="parsnips" data-amount=0>
                   <img src="{% static "images/order_parsnips.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Parsnips</h4></div>
                   {% include "add-minus.html" %}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="bokchoy" data-amount=0>
                   <img src="{% static "images/order_bokchoy.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Bokchoy</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="onions" data-amount=0>
                   <img src="{% static "images/order_redonion.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Red Onion</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="mushrooms" data-amount=0>
                   <img src="{% static "images/order_shiitakemush.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Shiitake Mushroom</h4></div>
                   {% include "add-minus.html" %}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="spotatoes" data-amount=0>
                   <img src="{% static "images/order_sweetpotatoes.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Sweet Potatoes</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="sprouts" data-amount=0>
                   <img src="{% static "images/order_brusselsprouts.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Brussel Sprouts</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4" data-amount=0>
+                <div class="col-md-4" data-name="squash" data-amount=0>
                   <img src="{% static "images/order_butternutsquash.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Butternut Squash</h4></div>
                   {% include "add-minus.html" %}
                 </div>
               </div>
+              <script>
+                $('.fa-plus').on('click', function() {
+                  var subNode = $(this).parents()[2];
+                  var amtNode = subNode.childNodes[5].childNodes[0];
+                  var dataVal = parseInt(amtNode.innerHTML);
+                  var dataVal = dataVal + 1;
+                  amtNode.innerHTML = dataVal.toString();
+                  
+                          });
+
+                $('.fa-minus').on('click', function() {
+                  var amtNode = $(this).parents()[2].childNodes[5].childNodes[0];
+                  var dataVal = parseInt(amtNode.innerHTML);
+                  var dataVal = dataVal - 1;
+                  amtNode.innerHTML = dataVal.toString();
+                  
+                          });
+              </script>
+
             </div>
             <div class="col-md-4 voffset25">
                 <div class="sidebar-nav-fixed affix">
