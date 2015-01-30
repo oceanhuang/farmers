@@ -37,4 +37,22 @@ class Farmer(models.Model):
 
 class Avail(models.Model):
 	farmer = models.ForeignKey(Farmer)
+	
+
 	date = models.DateField(auto_now=False)
+
+
+class Order(models.Model):
+	cost = models.IntegerField(default=0)
+	time = models.DateTimeField(auto_now=True)
+
+	#user = models.ForeignKey(User)
+
+
+
+class Fulfillment(models.Model):
+	order = models.ForeignKey(Order)
+	
+
+	time = models.DateTimeField(auto_now=True)
+
