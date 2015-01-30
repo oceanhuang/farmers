@@ -69,7 +69,7 @@
 
     <div class="container">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-        <div class="row">
+        <div class="row" id="subheader">
 
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
@@ -93,13 +93,15 @@
           </div>
 
           <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "veg.png" %}" class="img-responsive">
+              <img src="{% static "images/veg.png" %}" class="img-responsive">
               <div class="text-center voffset5">veg</div>
           </div>
         </div>
 
-        <div class="row voffset5">
-            <div class="col-md-8">
+        <div class="voffset150"></div>
+
+        <div class="row">
+            <div class="col-md-8 voffset50">
               <div class="row">
                 <div class="col-md-4">
                   <img src="{% static "images/order_garlic.jpg" %}" class="img-responsive img-rounded">
@@ -152,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 voffset25">
                 <div class="sidebar-nav-fixed affix">
                     <h3 class="text-center">Shopping Cart</h3>
                     <div id="cart_info">
