@@ -1,0 +1,28 @@
+{
+ "name": "Vegetables",
+ "children": [
+  {
+   "name": "Kale",
+   "children": [
+    { "name": "Hollywood Farms", "size": 3938} ,
+    { "name": "Redjacket", "size": 5321} ,
+    { "name": "Bill of Hamlin", "size": 1234}
+    ]
+  },
+  {
+    "name": "Butternut Squash",
+   "children": [
+    { "name": "Brooklyn Pumpkins", "size": 353} ,
+    { "name": "Redjacket", "size": 1592} ,
+    { "name": "Bob o Bob o Bob", "size": 654}
+    ]
+    },
+   {
+    "name": "Sweet Potatoes",
+   "children": [
+    { "name": "Joesphine, Mary, and Sue", "size": 1423} ,
+    { "name": "Hollywood Farms", "size": 793} 
+    ]
+    }
+  ]
+}
