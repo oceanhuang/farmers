@@ -14,6 +14,7 @@ class Product(models.Model):
 class Farmer(models.Model):
 	name = models.CharField(max_length=200)
 	description = models.CharField(max_length=200)
+	phone = models.IntegerField(default=11111111111, max_length=10)
 
 	products = models.ManyToManyField(Product)
 
