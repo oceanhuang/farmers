@@ -14,7 +14,7 @@
 
     <div class="container">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-        <div class="row">
+        <div class="row ">
 
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
@@ -42,6 +42,25 @@
           </div>
         </div>
         
+        <div class="row top-buffer">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="sidebar-nav-fixed affix">
+                    <h3 class="text-center">Shopping Cart</h3>
+                    <div id="cart_info">
+                        <div style="margin-left:20px;">
+                            <p> Item 1</p>
+                            <p> $2.50/bushels x 4 </p>
+                            
+                            <p> Item 2</p>
+                            <p> Item 3</p>
+                            <button type="button" class="btn btn-success top-buffer">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <h1>{% block title %}(no title){% endblock %}</h1>
 
