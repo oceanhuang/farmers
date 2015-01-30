@@ -58,5 +58,37 @@
       "phone" : 3037857303,
       "products" : [4]
     }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 7,
+    "fields": {
+      "farmer" : 5,
+      "date" : "2015-2-2"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 8,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-1-31"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 9,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-2-1"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 10,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-2-2"
+    }
   }
 ]

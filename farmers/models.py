@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Product(models.Model):
 	category = models.CharField(max_length=200)
 	name = models.CharField(max_length=200)
@@ -10,6 +11,17 @@ class Product(models.Model):
 	price = models.IntegerField(default=0)
 	amount = models.IntegerField(default=0)
 
+	#pass in date object, get the list of farmers with that product that are able to source it
+	def getFarmers(self, theDate):
+		derpmers = self.farmer_set.all()
+		retFarmers = []
+		for derp in derpmers:
+			for farmdate in derp.avail_set.all():
+				print farmdate.date
+				if farmdate.date == theDate:
+					retFarmers.append(derp)
+		return retFarmers
+
 
 class Farmer(models.Model):
 	name = models.CharField(max_length=200)
@@ -18,9 +30,11 @@ class Farmer(models.Model):
 
 	products = models.ManyToManyField(Product)
 
+
+
 	#availabilities
 	#locations
 
-class Availability(models.Model):
-	farmers = models.ForeignKey(Farmer)
+class Avail(models.Model):
+	farmer = models.ForeignKey(Farmer)
 	date = models.DateField(auto_now=False)
