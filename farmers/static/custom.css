@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 .row-padding {
     padding-left: 60px;
@@ -29,6 +29,7 @@ body {
 	position: fixed;
 	background-color: white;
 	z-index: 1025;
+	width: inherit;
 }
 
 .active_select { border-bottom: 2px solid #5FB732; }
@@ -36,6 +37,10 @@ body {
 .navbar-custom { background-color: #5FB732; }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: white;  /*Sets the text hover color on navbar*/
+}
+
+.navbar {
+	margin-bottom: 0px;
 }
 
 .navbar-default {
