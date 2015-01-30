@@ -1,3 +1,5 @@
+
+
 {% extends 'bootstrap3/bootstrap3.html' %}
 {% load staticfiles %}
 
@@ -19,6 +21,58 @@
     
     {% include "header.html" %}
 
+
+
+
+    <div class="modal fade" id="dateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                  <div class='col-sm-6'>
+                      <div class="form-group">
+                          <div class='input-group date' id='datetimepicker1'>
+                              <input type='text' class="form-control" />
+                              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+                  <script type="text/javascript">
+                    $('#datetimepicker1').datetimepicker({
+                      format: 'L'
+                    });
+                  </script>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="dateModalClose" type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+        <script>
+        var ourTime;
+
+      $('#dateModal').modal({
+        keyboard: false
+      });
+
+      $('#dateModal').modal('show');
+
+      $('#dateModalClose').on('click', function() {
+        $('#dateModal').modal('hide');
+
+      });
+    </script>
+
     <div class="container">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row">
@@ -37,9 +91,32 @@
           <div class="col-xs-4 col-md-2 row-padding">
               <img src="{% static "basket.png" %}" class="img-responsive">
           </div>
-          <div class="col-xs-4 col-md-2 row-padding">
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
               <img src="{% static "veg.png" %}" class="img-responsive">
           </div>
+        </div>
+
+
+        <div> 
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
+              <img src="{% static "veg.png" %}" class="img-responsive">
+          </div>
+
         </div>
         
 
