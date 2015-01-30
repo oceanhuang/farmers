@@ -52,6 +52,10 @@ button:hover {
 	width: 368px;
 }
 
+#select-dialog{
+	margin: 0 auto;
+}
+
 .no-bot {
 	margin-bottom: 0px;
 }

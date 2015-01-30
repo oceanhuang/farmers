@@ -89,7 +89,7 @@
       $('#dateModal').modal('show');
 
       $('#dateModalClose').on('click', function() {
-        $('#dateModal').modal('hide');
+        $('#dateModal').hide();
 
       });
     </script>
@@ -98,13 +98,23 @@
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row" id="subheader">
 
+          <div   class="col-xs-4 col-md-2 row-padding">
+              <input type="image" id="vegButton" src="{% static "images/veg.png" %}" class="img-responsive"> </input>
+              <div class="text-center voffset5">veggies</div>
+          </div>
+
+
+          <script>
+            
+          </script>
+
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/dairy.png" %}" class="img-responsive"></a>
-              <div class="text-center voffset5 active_select">Dairy</div>
+              <div class="text-center voffset5 ">dairy</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/bakedgoods.png" %}" class="img-responsive"></a>
-              <div class="text-center voffset5">bakedgoods</div>
+              <div class="text-center voffset5">baked goods</div>
           </div>
           <div class="col-xs-4 col-md-2 row-padding">
               <a href=""><img src="{% static "images/fruits.png" %}" class="img-responsive"></a>
@@ -119,63 +129,87 @@
               <div class="text-center voffset5">basket</div>
           </div>
 
-          <div id="vegButton"  class="col-xs-4 col-md-2 row-padding">
-              <img src="{% static "images/veg.png" %}" class="img-responsive">
-              <div class="text-center voffset5">veg</div>
-          </div>
+          
         </div>
+
+
+                  <div id= "select-dialog" class="modal-dialog">
+              Please select some stuff
+          </div>
+
+
+
+          <script>
+        
+
+        var h = window.innerHeight - 101;
+
+        $('.modal-dialog').css("top", "50%");
+        $('.modal-dialog').css("margin-top", h/2 + "px");
+
+
+        $('#vegButton').on('click', function() {
+              var vegDiv = $('#vegButton').siblings()[0];
+              vegDiv.className += "active_select";
+              $('#content-row').removeAttr('hidden');
+              $('#select-dialog').hide();
+            });
+
+
+        </script>
 
         <div class="voffset150"></div>
 
-        <div class="row">
+        <div id="content-row" hidden class="row">
             <div class="col-md-8 voffset50">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_garlic.jpg" %}" class="img-responsive img-rounded">
                   <!--- H4, H5, H6 all have huge margins -->
                   <div class="text-center"><h4>Garlic</h4></div>
                   {% include "add-minus.html" %}
+
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_bluepotatoes.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Blue Potatoes</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_parsnips.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Parsnips</h4></div>
                   {% include "add-minus.html" %}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_bokchoy.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Bokchoy</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_redonion.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Red Onion</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_shiitakemush.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Shiitake Mushroom</h4></div>
                   {% include "add-minus.html" %}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_sweetpotatoes.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Sweet Potatoes</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_brusselsprouts.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Brussel Sprouts</h4></div>
                   {% include "add-minus.html" %}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-amount=0>
                   <img src="{% static "images/order_butternutsquash.jpg" %}" class="img-responsive img-rounded">
                   <div class="row text-center"><h4>Butternut Squash</h4></div>
                   {% include "add-minus.html" %}
