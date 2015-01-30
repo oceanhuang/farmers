@@ -1,0 +1,94 @@
+[
+  {
+    "model": "farmers.product",
+    "pk": 1,
+    "fields": {
+      "name": "cucumber",
+      "description": "bumpy",
+      "price" : 200,
+      "category" : "veggie"
+    }
+  },
+  {
+    "model": "farmers.product",
+    "pk": 2,
+    "fields": {
+      "name": "apple",
+      "description": "teacher",
+      "price" : 99,
+      "category" : "fruit"
+    }
+  },
+  {
+    "model": "farmers.product",
+    "pk": 3,
+    "fields": {
+      "name": "pumpkin",
+      "description": "boo",
+      "price" : 675,
+      "category" : "veggie"
+    }
+  },
+  {
+    "model": "farmers.product",
+    "pk": 4,
+    "fields": {
+      "name": "milk",
+      "description": "mooo",
+      "price" : 300,
+      "category" : "dairy"
+    }
+  },
+  {
+    "model": "farmers.farmer",
+    "pk": 5,
+    "fields": {
+      "name" : "BOB",
+      "description" : "TWIN PEAKS",
+      "phone" : 7037857101,
+      "products" : [1, 3]
+    }
+  },
+  {
+    "model": "farmers.farmer",
+    "pk": 6,
+    "fields": {
+      "name" : "joe",
+      "description" : "not twin peaks",
+      "phone" : 3037857303,
+      "products" : [4]
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 7,
+    "fields": {
+      "farmer" : 5,
+      "date" : "2015-2-2"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 8,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-1-31"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 9,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-2-1"
+    }
+  },
+  {
+    "model": "farmers.avail",
+    "pk": 10,
+    "fields": {
+      "farmer" : 6,
+      "date" : "2015-2-2"
+    }
+  }
+]
